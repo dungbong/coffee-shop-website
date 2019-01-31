@@ -1,0 +1,302 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-image: url("img/bg.png");
+}
+
+@font-face {
+  font-family: ostrich-sans-bold;
+  src: url(font/ostrich-sans-bold.ttf);
+}
+
+.logo_bar {
+	padding-top: 5px;
+	background-color: rgb(255, 255, 255);
+	text-align: center;
+	position: relative;
+}
+
+.menu {
+	background-color: rgb(255, 255, 255);
+	font-size: 20px;
+	text-align: center;
+	padding-top: 10px;
+	z-index: 1;
+	position: relative;
+}
+
+.menu li {
+	font-family: ostrich-sans-bold;
+	display: inline-block;
+	width: 200px;
+}
+
+li a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu li a:hover {
+	color: red;
+}
+
+a.underline:after {
+	content: '';
+  position: relative;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+a.underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.event {
+	position: relative;
+	text-align: center;
+}
+
+.video {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	z-index: -1;
+	filter: opacity(70%);
+	filter: brightness(60%);
+}
+
+.in_bg {
+	position: absolute;
+	top: 50%;
+	z-index: 0;
+}
+
+
+
+.button {
+	text-align: center;
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:40px;
+  width: 150px;
+  font-size:1em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  border-radius: 10px;
+}
+.button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.button:before,.button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.button:hover:before,.button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+.button:focus {
+	color: yellow;
+}
+
+.recommendation1 {
+	position: relative;
+	padding: 20px;
+	height: auto;
+	margin: 10px;
+	text-align: center;
+	overflow: auto;
+}
+
+.recommendation2 {
+	position: relative;
+	height: auto;
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+	overflow: auto;
+}
+
+.rcmd_text {
+	position: relative;
+	font-family: ostrich-sans-bold;
+	font-size: 60px;
+	width: 100%;
+	color: white;
+	z-index: -1;
+}
+
+.vertical_text {
+	transform: rotate(20deg);
+	position: relative;
+	margin-top: 70px;
+	padding-top: 0; 
+	padding-bottom: 50px;
+	width: 100%;
+	font-family: Times New Roman;
+	font-size: 100px;
+	color: white;
+	z-index: -1;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: red;
+}
+
+.vertical1 {
+	width: 48%;
+	position: relative;
+	float: right;
+}
+
+.img1 {
+	border-radius: 10px;
+	position: relative;
+	width: 50%;
+	margin: 5px;
+	float: left;
+}
+
+.img2 {
+	border-radius: 10px;
+	position: relative;
+	width: 100%;
+	margin: 5px;
+}
+
+.vertical2 {
+	width: 50%;
+	position: relative;
+	float: right;
+}
+.img3 {
+	border-radius: 10px;
+	position: relative;
+	width: 48%;
+	margin: 5px;
+	float: left;
+}
+
+.img4 {
+	border-radius: 10px;
+	position: relative;
+	width: 100%;
+	height: 50%;
+	margin: 5px;
+}
+
+.list {
+	margin: 50px;
+	position: relative;
+	text-align: center;
+	padding: 20px;
+	overflow: auto;
+	height: 200px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.list:hover {
+	box-shadow: 5px 5px 5px grey;
+}
+
+.list_img {
+	width: 20%;
+	height: auto;
+	max-height: 200px;
+	position: relative;
+	float: left;
+}
+
+.explanation {
+	width: 75%;
+	padding: 5px;
+	max-height: 200px;
+	position: relative;
+	border-style: solid;
+	text-align: left;
+	border-radius: 10px;
+	border-color: red;
+	float: right;
+	border-width: 2px;
+	white-space: normal;
+	overflow-y: scroll;
+}
+
+.foot {
+	background-color: #FEFABF;
+	bottom: 0;
+}
+
+.lang_set {
+	display: inline-block;
+	position: relative;
+	padding: 5px;
+}
+
+.lang_icon {
+	position: relative;
+	float: left;
+	bottom: 0;
+}
+
+.sub_lang {
+	display: none;
+	width: auto;
+	margin: 5px
+	height: auto;
+	position: absolute;
+	bottom: 30px;
+	z-index: 1;
+	background-color: white;
+}
+
+.sub_lang a {
+	text-decoration: none;
+}
+
+.sub_lang a:hover {
+	color: red;
+}
+
+.lang_set:hover .sub_lang {
+	display: block;
+}
+
+.alright {
+	text-align: center;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
